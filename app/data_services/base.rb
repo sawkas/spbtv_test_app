@@ -2,7 +2,7 @@ module DataServices
   class Base
     include DataServices::Helpers
 
-    def customer_on_video(customer_id, video_id)
+    def customer_on_video(_customer_id, _video_id)
       raise 'customer_on_video should be implemented'
     end
 

@@ -20,11 +20,11 @@ module DataServices
     end
 
     def select_by_customer_id(array, customer_id)
-      array.select{ |i| i[/^#{customer_id}#{DATA_SEPARATOR}.*$/] }
+      array.select { |i| i[/^#{customer_id}#{DATA_SEPARATOR}.*$/] }
     end
 
     def select_by_video_id(array, video_id)
-      array.select{ |i| i[/^.*#{DATA_SEPARATOR}#{video_id}$/] }
+      array.select { |i| i[/^.*#{DATA_SEPARATOR}#{video_id}$/] }
     end
   end
 end
