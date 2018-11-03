@@ -1,25 +1,16 @@
 class SpbtvTestApp < Sinatra::Application
   # actions
   watch_stream = lambda do
-    customer_id = params[:customer_id]
-    video_id    = params[:video_id]
-    timestamp   = Time.now.to_i
-
-    status 200
+    settings.data_service.customer_on_video(params[:customer_id], params[:video_id])
+    json storage: settings.data_service.storage
   end
 
   videos_count = lambda do
-    customer_id = params[:customer_id]
-    timestamp   = Time.now.to_i
-
-    json videos_count: 10
+    json videos_count: settings.data_service.videos_count(params[:customer_id])
   end
 
   customers_count = lambda do
-    video_id  = params[:video_id]
-    timestamp = Time.now.to_i
-
-    json customers_count: 10
+    json customers_count: settings.data_service.customers_count(params[:video_id])
   end
 
   # routes
