@@ -15,25 +15,3 @@ module DataServices
     end
   end
 end
-
-
-# storage
-# {
-#   unix_time_string: [
-#     "#{customer_id}#{separator}#{video_id}"
-#   ]
-# }
-
-# storage example
-# {
-#   "1541254562": [
-#     "customer_id_1%:%video_id_1",
-#     "customer_id_1%:%video_id_2",
-#     "customer_id_2%:%video_id_1"
-#   ],
-#   "1541254563": [
-#     "customer_id_1%:%video_id_2",
-#     "customer_id_2%:%video_id_1",
-#     "customer_id_2%:%video_id_3"
-#   ]
-# }
