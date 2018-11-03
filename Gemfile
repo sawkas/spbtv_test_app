@@ -5,6 +5,4 @@ gem 'sinatra-contrib'
 
 gem 'rack-contrib'
 
-group :development do
-  gem 'shotgun'
-end
+gem 'dotenv'
