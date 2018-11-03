@@ -1,5 +1,7 @@
 module DataServices
   class Hash < Base
+    attr_reader :storage
+
     def initialize
       @storage = {}
     end
@@ -9,14 +11,6 @@ module DataServices
 
       storage[current_timestamp] ||= []
       storage[current_timestamp] << data_string(customer_id, video_id)
-    end
-
-    def videos_count(customer_id)
-      select_by_customer_id(actual_data_strings, customer_id).size
-    end
-
-    def customers_count(video_id)
-      select_by_video_id(actual_data_strings, video_id).size
     end
 
     private

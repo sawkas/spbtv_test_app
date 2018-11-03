@@ -6,3 +6,5 @@ gem 'sinatra-contrib'
 gem 'rack-contrib'
 
 gem 'dotenv'
+
+gem 'redis'

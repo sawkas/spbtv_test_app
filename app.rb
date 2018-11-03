@@ -9,6 +9,7 @@ require_relative 'app/actions'
 require_relative 'app/data_services/helpers'
 require_relative 'app/data_services/base'
 require_relative 'app/data_services/hash'
+require_relative 'app/data_services/redis'
 
 class SpbtvTestApp < Sinatra::Application
   before do

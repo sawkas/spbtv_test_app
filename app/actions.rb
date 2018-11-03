@@ -2,7 +2,6 @@ class SpbtvTestApp < Sinatra::Application
   # actions
   watch_stream = lambda do
     settings.data_service.customer_on_video(params[:customer_id], params[:video_id])
-    json storage: settings.data_service.storage
   end
 
   videos_count = lambda do
